@@ -1,9 +1,10 @@
 # WinGO
 
 This project is a gambling game created only for learning purposes.
+The referral project can be seen here: <https://www.volcanobet.me/bingo/>
 
 ## Learning info
-Primarly Learning C++, QT6 and TDD
+Primarily Learning C++, QT6 and TDD
 
 ## Technical info
 Programming language: C++ 17
