@@ -1,0 +1,4 @@
+# Hashes of file build rules.
+de63aa90c717e5e4a857712d1eaa2b0c CMakeFiles/WinGO_Lib_autogen
+9d7be58007f35f30d03471486823829f CMakeFiles/WinGO_autogen
+84e4a0cd65cfa6c0fbba50bdcceb840c tests/unit-tests/CMakeFiles/UnitTests_autogen

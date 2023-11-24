@@ -1,0 +1,12 @@
+/home/borko/Documents/Projects/Software Development/CPP/WinGO/build/CMakeFiles/WinGO_Lib.dir
+/home/borko/Documents/Projects/Software Development/CPP/WinGO/build/CMakeFiles/WinGO.dir
+/home/borko/Documents/Projects/Software Development/CPP/WinGO/build/CMakeFiles/test.dir
+/home/borko/Documents/Projects/Software Development/CPP/WinGO/build/CMakeFiles/edit_cache.dir
+/home/borko/Documents/Projects/Software Development/CPP/WinGO/build/CMakeFiles/rebuild_cache.dir
+/home/borko/Documents/Projects/Software Development/CPP/WinGO/build/CMakeFiles/WinGO_Lib_autogen.dir
+/home/borko/Documents/Projects/Software Development/CPP/WinGO/build/CMakeFiles/WinGO_autogen.dir
+/home/borko/Documents/Projects/Software Development/CPP/WinGO/build/tests/unit-tests/CMakeFiles/UnitTests.dir
+/home/borko/Documents/Projects/Software Development/CPP/WinGO/build/tests/unit-tests/CMakeFiles/test.dir
+/home/borko/Documents/Projects/Software Development/CPP/WinGO/build/tests/unit-tests/CMakeFiles/edit_cache.dir
+/home/borko/Documents/Projects/Software Development/CPP/WinGO/build/tests/unit-tests/CMakeFiles/rebuild_cache.dir
+/home/borko/Documents/Projects/Software Development/CPP/WinGO/build/tests/unit-tests/CMakeFiles/UnitTests_autogen.dir
