@@ -7,9 +7,11 @@
 //WinGO is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
 //You should have received a copy of the GNU General Public License along with WinGO. If not, see <https://www.gnu.org/licenses/>.
 
-#include <iostream>
+#ifndef WINGO_ACCOUNT_H
+#define WINGO_ACCOUNT_H
 
-int main() {
-    std::cout << "Hello, World!" << std::endl;
-    return 0;
-}
+class Account {
+};
+
+
+#endif //WINGO_ACCOUNT_H

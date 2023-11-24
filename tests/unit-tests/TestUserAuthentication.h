@@ -7,9 +7,20 @@
 //WinGO is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
 //You should have received a copy of the GNU General Public License along with WinGO. If not, see <https://www.gnu.org/licenses/>.
 
-#include <iostream>
+#ifndef WINGO_TESTUSERAUTHENTICATION_H
+#define WINGO_TESTUSERAUTHENTICATION_H
 
-int main() {
-    std::cout << "Hello, World!" << std::endl;
-    return 0;
-}
+#include <QObject>
+
+namespace unit_tests {
+
+    class TestUserAuthentication : public QObject {
+        Q_OBJECT
+
+    private slots:
+        void UserShouldHaveAccount();
+    };
+
+} // unit_tests
+
+#endif //WINGO_TESTUSERAUTHENTICATION_H
