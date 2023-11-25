@@ -10,7 +10,18 @@
 #ifndef WINGO_ACCOUNT_H
 #define WINGO_ACCOUNT_H
 
+#include "string"
+using namespace std;
+
 class Account {
+private:
+    string m_userName;
+    string m_password;
+public:
+    void SetUserName(string userName);
+    string GetUserName() const;
+    void SetPassword(string password);
+    string GetPassword() const;
 };
 
 

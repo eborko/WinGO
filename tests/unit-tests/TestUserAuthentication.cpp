@@ -11,6 +11,7 @@
 #include "../../src/authentication/User.h"
 #include "../../src/authentication/Account.h"
 #include "QtTest"
+#include "string"
 
 namespace unit_tests {
     void TestUserAuthentication::UserShouldHaveAccount() {
@@ -30,5 +31,17 @@ namespace unit_tests {
         // Clean up allocated memory
         delete testUser;
         delete testAccount;
+    }
+
+    void TestUserAuthentication::AccountShouldHaveUserNameAndPassword() {
+        Account* testAccount = new Account();
+        std::string userName = "uname";
+        std::string password = "pass";
+
+        testAccount->SetUserName(userName);
+        testAccount->SetPassword(password);
+
+        QCOMPARE(testAccount->GetUserName(), userName);
+        QCOMPARE(testAccount->GetPassword(), password);
     }
 } // unit_tests

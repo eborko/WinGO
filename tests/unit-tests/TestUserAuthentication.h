@@ -19,6 +19,7 @@ namespace unit_tests {
 
     private slots:
         void UserShouldHaveAccount();
+        void AccountShouldHaveUserNameAndPassword();
     };
 
 } // unit_tests
