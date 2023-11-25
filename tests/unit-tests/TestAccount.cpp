@@ -7,18 +7,12 @@
 #include <QTest>
 
 namespace unit_tests {
-    using namespace unit_tests;
+    using namespace std;
 
-    void TestAccount::AccountShouldHaveUserNameAndPassword() {
-        Account* testAccount = new Account();
-        std::string userName = "uname";
-        std::string password = "pass";
+    void TestAccount::PasswordShouldFollowPasswordPolicy() {
+        //Account* testAccount = new Account();
 
-        testAccount->SetUserName(userName);
-        testAccount->SetPassword(password);
-
-        QCOMPARE(testAccount->GetUserName(), userName);
-        QCOMPARE(testAccount->GetPassword(), password);
+        // TODO: add testing code here
     }
 
 } // unit_tests

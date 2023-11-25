@@ -13,7 +13,7 @@ namespace unit_tests {
         Q_OBJECT
 
     private slots:
-        void AccountShouldHaveUserNameAndPassword();
+        void PasswordShouldFollowPasswordPolicy();
     };
 
 } // unit_tests

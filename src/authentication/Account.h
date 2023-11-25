@@ -11,6 +11,10 @@
 #define WINGO_ACCOUNT_H
 
 #include "string"
+
+// Avoid cyclic include behavior
+class TestAccount;
+
 using namespace std;
 
 class Account {
@@ -22,6 +26,16 @@ public:
     string GetUserName() const;
     void SetPassword(string password);
     string GetPassword() const;
+
+    /// Password must follow rules below:
+    /// Rule 1: Password must have between 8 and 12 characters including 8 and 12
+    /// Rule 2: Password
+    /// \param password string to validate
+    /// \return
+private:
+    bool IsValidPassword(string password);
+
+    friend class TestAccount;
 };
 
 

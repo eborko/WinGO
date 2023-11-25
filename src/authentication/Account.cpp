@@ -25,3 +25,11 @@ string Account::GetPassword() const {
     return m_password;
 }
 
+bool Account::IsValidPassword(string password) {
+    if (password.length() > 8) {
+        return true;
+    }
+
+    return false;
+}
+
