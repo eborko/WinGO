@@ -1,5 +1,5 @@
 //
-// Created by borko on 24.11.23..
+// Created by borko on 11/25/23.
 //
 
 //This file is part of WinGO.
@@ -7,28 +7,10 @@
 //WinGO is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
 //You should have received a copy of the GNU General Public License along with WinGO. If not, see <https://www.gnu.org/licenses/>.
 
-#include "TestUserAuthentication.h"
+#include "TestUser.h"
 #include "../../src/authentication/User.h"
 #include "../../src/authentication/Account.h"
-#include "QtTest"
+#include <QTest>
 
 namespace unit_tests {
-    void TestUserAuthentication::UserShouldHaveAccount() {
-        // Create a test user and account
-        User* testUser = new User();
-        Account* testAccount = new Account();
-
-        // Set the account for the test user
-        testUser->SetAccount(testAccount);
-
-        // Get the account associated with the test user
-        Account* retrievedAccount = testUser->GetAccount();
-
-        // Verify that the retrieved account matches the initially set account
-        QVERIFY(retrievedAccount == testAccount);
-
-        // Clean up allocated memory
-        delete testUser;
-        delete testAccount;
-    }
 } // unit_tests

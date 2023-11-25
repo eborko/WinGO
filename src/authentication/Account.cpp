@@ -8,3 +8,28 @@
 //You should have received a copy of the GNU General Public License along with WinGO. If not, see <https://www.gnu.org/licenses/>.
 
 #include "Account.h"
+
+void Account::SetUserName(string userName) {
+    m_userName = userName;
+}
+
+string Account::GetUserName() const {
+    return m_userName;
+}
+
+void Account::SetPassword(string password) {
+    m_password = password;
+}
+
+string Account::GetPassword() const {
+    return m_password;
+}
+
+bool Account::IsValidPassword(string password) {
+    if (password.length() > 8) {
+        return true;
+    }
+
+    return false;
+}
+

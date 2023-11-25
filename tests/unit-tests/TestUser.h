@@ -1,5 +1,5 @@
 //
-// Created by borko on 24.11.23..
+// Created by borko on 11/25/23.
 //
 
 //This file is part of WinGO.
@@ -7,13 +7,20 @@
 //WinGO is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
 //You should have received a copy of the GNU General Public License along with WinGO. If not, see <https://www.gnu.org/licenses/>.
 
-#include "TestUserAuthentication.h"
-#include "QTest"
+#ifndef WINGO_TESTUSER_H
+#define WINGO_TESTUSER_H
 
-int main(int argc, char *argv[]) {
+#include <QObject>
 
-    unit_tests::TestUserAuthentication testUserAuthentication;
-    QTest::qExec(&testUserAuthentication);
+namespace unit_tests {
 
-    return 0;
-}
+    class TestUser : public QObject {
+        Q_OBJECT
+
+    private slots:
+
+    };
+
+} // unit_tests
+
+#endif //WINGO_TESTUSER_H
