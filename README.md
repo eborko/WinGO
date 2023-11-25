@@ -9,6 +9,7 @@ Primarily Learning C++, QT6 and TDD
 ## Technical info
 Programming language: C++ 17
 Frameworks: QT6
+UML tool: StarUML
 
 ## License
 
