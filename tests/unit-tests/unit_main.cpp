@@ -8,12 +8,15 @@
 //You should have received a copy of the GNU General Public License along with WinGO. If not, see <https://www.gnu.org/licenses/>.
 
 #include <QTest>
-#include "TestUserAuthentication.h"
+#include "TestUser.h"
+#include "TestAccount.h"
 
 using namespace unit_tests;
 
 int main() {
-    TestUserAuthentication testUserAuthentication;
+    TestUser testUser;
+    TestAccount testAccount;
 
-    QTest::qExec(&testUserAuthentication);
+    QTest::qExec(&testUser);
+    QTest::qExec(&testAccount);
 }
