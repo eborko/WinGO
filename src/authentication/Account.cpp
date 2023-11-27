@@ -27,7 +27,8 @@ string Account::GetUserName() const {
 }
 
 void Account::SetPassword(string password) {
-    m_password = password;
+    if (IsValidPassword(password))
+        m_password = password;
 }
 
 string Account::GetPassword() const {
