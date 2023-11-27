@@ -1,5 +1,5 @@
 //
-// Created by borko on 11/26/23.
+// Created by borko on 11/27/23.
 //
 
 //This file is part of WinGO.
@@ -7,18 +7,10 @@
 //WinGO is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
 //You should have received a copy of the GNU General Public License along with WinGO. If not, see <https://www.gnu.org/licenses/>.
 
-#include "QTest"
-#include "TestPasswordRules.h"
-#include "TestUserNameRules.h"
+#include "UserNameBlankSpaceRule.h"
 
-using namespace unit_tests;
+bool UserNameBlankSpaceRule::IsRuleSatisfied(string userName) {
+    if (userName.find(' ') == std::string::npos)  return true;
 
-int main() {
-    TestPasswordRules testPasswordRules;
-    TestUserNameRules testUserNameRules;
-
-    QTest::qExec(&testPasswordRules);
-    QTest::qExec(&testUserNameRules);
-
-    return 0;
+    return false;
 }

@@ -1,5 +1,5 @@
 //
-// Created by borko on 11/26/23.
+// Created by borko on 11/27/23.
 //
 
 //This file is part of WinGO.
@@ -7,18 +7,16 @@
 //WinGO is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
 //You should have received a copy of the GNU General Public License along with WinGO. If not, see <https://www.gnu.org/licenses/>.
 
-#include "QTest"
-#include "TestPasswordRules.h"
 #include "TestUserNameRules.h"
+#include "../../../src/authentication/username-rules/UserNameBlankSpaceRule.h"
+#include "QTest"
 
-using namespace unit_tests;
+void unit_tests::TestUserNameRules::UserNameShouldNotContainBlankSpace() {
+    UserNameBlankSpaceRule userNameBlankSpaceRule;
 
-int main() {
-    TestPasswordRules testPasswordRules;
-    TestUserNameRules testUserNameRules;
+    // Try with blank space character
+    QVERIFY(!userNameBlankSpaceRule.IsRuleSatisfied("string with blank spaces"));
 
-    QTest::qExec(&testPasswordRules);
-    QTest::qExec(&testUserNameRules);
-
-    return 0;
+    // Try without blank character
+    QVERIFY(userNameBlankSpaceRule.IsRuleSatisfied("stringWithoutSpaces"));
 }

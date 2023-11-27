@@ -30,6 +30,10 @@ add_library(WinGO_Lib SHARED
         src/authentication/password-rules/PasswordRule.cpp
         src/authentication/password-rules/PasswordUpperCharacterRule.cpp
         src/authentication/password-rules/PasswordUpperCharacterRule.h
+        src/authentication/username-rules/UserNameRule.cpp
+        src/authentication/username-rules/UserNameRule.h
+        src/authentication/username-rules/UserNameBlankSpaceRule.cpp
+        src/authentication/username-rules/UserNameBlankSpaceRule.h
 )
 
 # Set the ENABLE_EXPORTS property for the library

@@ -1,5 +1,5 @@
 //
-// Created by borko on 11/26/23.
+// Created by borko on 11/27/23.
 //
 
 //This file is part of WinGO.
@@ -7,18 +7,18 @@
 //WinGO is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
 //You should have received a copy of the GNU General Public License along with WinGO. If not, see <https://www.gnu.org/licenses/>.
 
-#include "QTest"
-#include "TestPasswordRules.h"
-#include "TestUserNameRules.h"
+#ifndef WINGO_USERNAMERULE_H
+#define WINGO_USERNAMERULE_H
 
-using namespace unit_tests;
+#include "string"
 
-int main() {
-    TestPasswordRules testPasswordRules;
-    TestUserNameRules testUserNameRules;
+using namespace std;
 
-    QTest::qExec(&testPasswordRules);
-    QTest::qExec(&testUserNameRules);
+class UserNameRule {
 
-    return 0;
-}
+public:
+    virtual bool IsRuleSatisfied(string userName) = 0;
+};
+
+
+#endif //WINGO_USERNAMERULE_H
