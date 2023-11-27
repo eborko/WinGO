@@ -14,6 +14,7 @@
 
 class PasswordSymbolRule : public PasswordRule {
 public:
+    /// Password must contain at least one symbol character.
     bool IsRuleSatisfied(std::string password) override;
 };
 

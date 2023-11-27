@@ -9,6 +9,7 @@
 
 #include "TestUserNameRules.h"
 #include "../../../src/authentication/username-rules/UserNameBlankSpaceRule.h"
+#include "../../../src/authentication/username-rules/UserNameLengthRule.h"
 #include "QTest"
 
 void unit_tests::TestUserNameRules::UserNameShouldNotContainBlankSpace() {
@@ -19,4 +20,17 @@ void unit_tests::TestUserNameRules::UserNameShouldNotContainBlankSpace() {
 
     // Try without blank character
     QVERIFY(userNameBlankSpaceRule.IsRuleSatisfied("stringWithoutSpaces"));
+}
+
+void unit_tests::TestUserNameRules::UserNameLengthShouldBeBetweenThreeAndNineCharacters() {
+    UserNameLengthRule userNameLengthRule;
+
+    // Try with length of 2 characters
+    QVERIFY(!userNameLengthRule.IsRuleSatisfied("ds"));
+
+    // Try with length of 10 characters
+    QVERIFY(!userNameLengthRule.IsRuleSatisfied("asdfghjkli"));
+
+    // Try with length of 6 characters
+    QVERIFY(userNameLengthRule.IsRuleSatisfied("dsad"));
 }

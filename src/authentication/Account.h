@@ -11,6 +11,7 @@
 #define WINGO_ACCOUNT_H
 
 #include "string"
+#include "vector"
 
 // Avoid cyclic include behavior
 class TestAccount;
@@ -27,18 +28,27 @@ public:
     void SetPassword(string password);
     string GetPassword() const;
 
-    /// Password must follow rules below:
+    /// Password must satisfy rules below:
     /// \Rule1 Password must be between 8 and 12 characters - including 8 and 12.
     /// Implementation can be found in PasswordLengthRule.cpp.
     /// \Rule2 Password must contain at least one numeric character.
     /// Implementation can be found in PasswordNumericRule.cpp.
     /// \Rule3 Password must contain at least one symbol character.
     /// Implementation can be found in PasswordSymbolRule.cpp.
+    /// \Rule4 Password must contain at least one upper case character
+    /// Implementation can be found in PasswordUpperCharacterRule.cpp
     /// \param password string to validate
     /// \return true if password is valid, otherwise returns false
     bool IsValidPassword(string password);
 
-    friend class TestAccount;
+    /// UserName must satisfy rules below:
+    /// \Rule1 UserName must be between 3 and 9 characters in length - including 3 and 9
+    /// Implementation can be found in UserNameLengthRule.cpp
+    /// \Rule2 UserName must not contain blank space character
+    /// Implementation can be found in UserNameBlankSpaceRule.cpp
+    /// \param userName string to validate
+    /// \return
+    bool IsValidUserName(string userName);
 };
 
 

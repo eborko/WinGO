@@ -17,6 +17,7 @@ using namespace std;
 
 class PasswordUpperCharacterRule : public PasswordRule {
 public:
+    /// Password must contain at least one upper case character
     bool IsRuleSatisfied(string password) override;
 };
 

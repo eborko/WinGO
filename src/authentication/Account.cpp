@@ -12,14 +12,17 @@
 #include "password-rules/PasswordLengthRule.h"
 #include "password-rules/PasswordNumericRule.h"
 #include "password-rules/PasswordUpperCharacterRule.h"
+#include "username-rules/UserNameBlankSpaceRule.h"
+#include "username-rules/UserNameLengthRule.h"
 #include "vector"
 
 class PasswordRule;
+class UserNameRule;
 
 using namespace std;
 
 void Account::SetUserName(string userName) {
-    m_userName = userName;
+    if (IsValidUserName(userName)) m_userName = userName;
 }
 
 string Account::GetUserName() const {
@@ -27,8 +30,7 @@ string Account::GetUserName() const {
 }
 
 void Account::SetPassword(string password) {
-    if (IsValidPassword(password))
-        m_password = password;
+    if (IsValidPassword(password)) m_password = password;
 }
 
 string Account::GetPassword() const {
@@ -42,7 +44,6 @@ bool Account::IsValidPassword(string password) {
     PasswordSymbolRule passwordSymbolRule;
     PasswordUpperCharacterRule passwordUpperCharacterRule;
 
-
     // Add rules
     vector<PasswordRule*> rules;
     rules.push_back(&passwordLengthRule);
@@ -53,6 +54,23 @@ bool Account::IsValidPassword(string password) {
     // Apply rules
     for (const auto& rule : rules) {
         if (!rule->IsRuleSatisfied(password)) return false;
+    }
+
+    return true;
+}
+
+bool Account::IsValidUserName(string userName) {
+    // Declare rules
+    UserNameBlankSpaceRule userNameBlankSpaceRule;
+    UserNameLengthRule userNameLengthRule;
+
+    // Add rules
+    vector<UserNameRule*> rules;
+    rules.push_back(&userNameLengthRule);
+    rules.push_back(&userNameBlankSpaceRule);
+
+    for (const auto& rule : rules) {
+        if (!rule->IsRuleSatisfied(userName)) return false;
     }
 
     return true;

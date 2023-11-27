@@ -14,7 +14,8 @@
 
 class PasswordLengthRule : public PasswordRule {
 public:
-     bool IsRuleSatisfied(std::string password) override;
+    /// Password must be between 8 and 12 characters - including 8 and 12.
+    bool IsRuleSatisfied(std::string password) override;
 };
 
 #endif //WINGO_PASSWORDLENGTHRULE_H

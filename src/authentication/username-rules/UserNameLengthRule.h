@@ -1,5 +1,5 @@
 //
-// Created by borko on 11/26/23.
+// Created by borko on 11/27/23.
 //
 
 //This file is part of WinGO.
@@ -7,15 +7,17 @@
 //WinGO is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
 //You should have received a copy of the GNU General Public License along with WinGO. If not, see <https://www.gnu.org/licenses/>.
 
-#ifndef WINGO_PASSWORDNUMERICRULE_H
-#define WINGO_PASSWORDNUMERICRULE_H
+#ifndef WINGO_USERNAMELENGTHRULE_H
+#define WINGO_USERNAMELENGTHRULE_H
 
-#include "PasswordRule.h"
+#include "UserNameRule.h"
 
-class PasswordNumericRule : public PasswordRule {
+class UserNameLengthRule : public UserNameRule {
 public:
-    /// Password must contain at least one numeric character.
-    bool IsRuleSatisfied(std::string password) override;
+    /// UserName must be between 3 and 9 characters in length - including 3 and 9
+    bool IsRuleSatisfied(std::string userName) override;
+
 };
 
-#endif //WINGO_PASSWORDNUMERICRULE_H
+
+#endif //WINGO_USERNAMELENGTHRULE_H

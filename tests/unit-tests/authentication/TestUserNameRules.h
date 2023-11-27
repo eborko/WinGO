@@ -12,6 +12,7 @@ namespace unit_tests {
 
     private slots:
         void UserNameShouldNotContainBlankSpace();
+        void UserNameLengthShouldBeBetweenThreeAndNineCharacters();
     };
 }
 

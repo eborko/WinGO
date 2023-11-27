@@ -14,6 +14,7 @@
 
 class UserNameBlankSpaceRule : public UserNameRule {
 public:
+    /// UserName must not contain blank space character
     bool IsRuleSatisfied(string userName) override;
 };
 

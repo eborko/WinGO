@@ -34,6 +34,8 @@ add_library(WinGO_Lib SHARED
         src/authentication/username-rules/UserNameRule.h
         src/authentication/username-rules/UserNameBlankSpaceRule.cpp
         src/authentication/username-rules/UserNameBlankSpaceRule.h
+        src/authentication/username-rules/UserNameLengthRule.cpp
+        src/authentication/username-rules/UserNameLengthRule.h
 )
 
 # Set the ENABLE_EXPORTS property for the library
