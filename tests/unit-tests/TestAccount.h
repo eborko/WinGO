@@ -20,7 +20,16 @@ namespace unit_tests {
         /// Implementation can be found in PasswordNumericRule.cpp.
         /// \Rule3 Password must contain at least one symbol character.
         /// Implementation can be found in PasswordSymbolRule.cpp.
+        /// \Rule4 Password must contain at least one upper case character
+        /// Implementation can be found in PasswordUpperCharacterRule.cpp
         void PasswordShouldFollowPasswordPolicy();
+
+        /// UserName must satisfy rules below:
+        /// \Rule1 UserName must be between 3 and 9 characters in length - including 3 and 9
+        /// Implementation can be found in UserNameLengthRule.cpp
+        /// \Rule2 UserName must not contain blank space character
+        /// Implementation can be found in UserNameBlankSpaceRule.cpp
+        void UserNameShouldFollowUserNamePolicy();
     };
 
 } // unit_tests

@@ -39,7 +39,7 @@ public:
     /// Implementation can be found in PasswordUpperCharacterRule.cpp
     /// \param password string to validate
     /// \return true if password is valid, otherwise returns false
-    bool IsValidPassword(string password);
+    static bool IsValidPassword(string password);
 
     /// UserName must satisfy rules below:
     /// \Rule1 UserName must be between 3 and 9 characters in length - including 3 and 9
@@ -48,7 +48,7 @@ public:
     /// Implementation can be found in UserNameBlankSpaceRule.cpp
     /// \param userName string to validate
     /// \return
-    bool IsValidUserName(string userName);
+    static bool IsValidUserName(string userName);
 };
 
 

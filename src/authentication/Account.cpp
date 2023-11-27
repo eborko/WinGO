@@ -22,7 +22,8 @@ class UserNameRule;
 using namespace std;
 
 void Account::SetUserName(string userName) {
-    if (IsValidUserName(userName)) m_userName = userName;
+    if (m_userName != userName && IsValidUserName(userName))
+        m_userName = userName;
 }
 
 string Account::GetUserName() const {
@@ -30,7 +31,8 @@ string Account::GetUserName() const {
 }
 
 void Account::SetPassword(string password) {
-    if (IsValidPassword(password)) m_password = password;
+    if (m_password != password && IsValidPassword(password))
+        m_password = password;
 }
 
 string Account::GetPassword() const {
