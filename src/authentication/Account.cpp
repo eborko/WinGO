@@ -8,6 +8,14 @@
 //You should have received a copy of the GNU General Public License along with WinGO. If not, see <https://www.gnu.org/licenses/>.
 
 #include "Account.h"
+#include "password-rules/PasswordSymbolRule.h"
+#include "password-rules/PasswordLengthRule.h"
+#include "password-rules/PasswordNumericRule.h"
+#include "vector"
+
+class PasswordRule;
+
+using namespace std;
 
 void Account::SetUserName(string userName) {
     m_userName = userName;
@@ -26,10 +34,19 @@ string Account::GetPassword() const {
 }
 
 bool Account::IsValidPassword(string password) {
-    if (password.length() > 8) {
-        return true;
+    PasswordLengthRule passwordLengthRule;
+    PasswordNumericRule passwordNumericRule;
+    PasswordSymbolRule passwordSymbolRule;
+
+    vector<PasswordRule*> rules;
+    rules.push_back(&passwordLengthRule);
+    rules.push_back(&passwordNumericRule);
+    rules.push_back(&passwordSymbolRule);
+
+    for (const auto& rule : rules) {
+        if (!rule->IsRuleSatisfied(password)) return false;
     }
 
-    return false;
+    return true;
 }
 

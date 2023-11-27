@@ -10,9 +10,21 @@ namespace unit_tests {
     using namespace std;
 
     void TestAccount::PasswordShouldFollowPasswordPolicy() {
-        //Account* testAccount = new Account();
+        Account account;
 
-        // TODO: add testing code here
+        // Try with bad password length
+        QVERIFY(!account.IsValidPassword("fds"));
+        QVERIFY(!account.IsValidPassword("fdsretrertyui"));
+
+        // Try with correct password length and number but without a symbol
+        QVERIFY(!account.IsValidPassword("asdfghjkl3"));
+
+        // Try with correct password length and symbol but without number
+        QVERIFY(!account.IsValidPassword("asdfghjkl#"));
+
+        // Try with correct password
+        QVERIFY(account.IsValidPassword("borko123456#"));
+
     }
 
 } // unit_tests

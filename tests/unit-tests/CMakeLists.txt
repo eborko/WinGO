@@ -8,10 +8,13 @@ add_executable(UnitTests unit_main.cpp
         TestUser.cpp
         TestUser.h)
 
-# Link your executable with Qt components
+# Link executable with Qt components
 target_link_libraries(UnitTests WinGO_Lib Qt6::Test Qt6::Core Qt6::Widgets)
 
 enable_testing()
+
+# Add the tests directory to the build
+add_subdirectory(authentication)
 
 add_test(TestUser UnitTests)
 add_test(TestAccount UnitTests)

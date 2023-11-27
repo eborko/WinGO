@@ -28,11 +28,14 @@ public:
     string GetPassword() const;
 
     /// Password must follow rules below:
-    /// Rule 1: Password must have between 8 and 12 characters including 8 and 12
-    /// Rule 2: Password
+    /// \Rule1 Password must be between 8 and 12 characters - including 8 and 12.
+    /// Implementation can be found in PasswordLengthRule.cpp.
+    /// \Rule2 Password must contain at least one numeric character.
+    /// Implementation can be found in PasswordNumericRule.cpp.
+    /// \Rule3 Password must contain at least one symbol character.
+    /// Implementation can be found in PasswordSymbolRule.cpp.
     /// \param password string to validate
-    /// \return
-private:
+    /// \return true if password is valid, otherwise returns false
     bool IsValidPassword(string password);
 
     friend class TestAccount;
