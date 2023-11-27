@@ -43,7 +43,7 @@ set_property(TARGET WinGO_Lib PROPERTY ENABLE_EXPORTS ON)
 
 add_executable(WinGO main.cpp)
 
-# Link your executable with Qt components
+# Link executable with Qt components
 target_link_libraries(WinGO WinGO_Lib Qt6::Test Qt6::Core Qt6::Widgets)
 
 # Add the tests directory to the build
