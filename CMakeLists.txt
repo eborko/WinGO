@@ -28,6 +28,8 @@ add_library(WinGO_Lib SHARED
         src/authentication/password-rules/PasswordNumericRule.h
         src/authentication/password-rules/PasswordSymbolRule.h
         src/authentication/password-rules/PasswordRule.cpp
+        src/authentication/password-rules/PasswordUpperCharacterRule.cpp
+        src/authentication/password-rules/PasswordUpperCharacterRule.h
 )
 
 # Set the ENABLE_EXPORTS property for the library

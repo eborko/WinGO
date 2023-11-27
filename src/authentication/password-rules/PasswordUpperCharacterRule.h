@@ -1,5 +1,5 @@
 //
-// Created by borko on 11/26/23.
+// Created by borko on 11/27/23.
 //
 
 //This file is part of WinGO.
@@ -7,21 +7,17 @@
 //WinGO is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
 //You should have received a copy of the GNU General Public License along with WinGO. If not, see <https://www.gnu.org/licenses/>.
 
-#ifndef WINGO_TESTPASSWORDRULES_H
-#define WINGO_TESTPASSWORDRULES_H
+#ifndef WINGO_PASSWORDUPPERCHARACTERRULE_H
+#define WINGO_PASSWORDUPPERCHARACTERRULE_H
 
-#include "QObject"
+#include "PasswordRule.h"
+#include "string"
 
-namespace unit_tests{
-    class TestPasswordRules : public QObject {
-        Q_OBJECT
+using namespace std;
 
-    private slots:
-        void PasswordShouldHaveLengthBetweenEightAndTwelveCharacters();
-        void PasswordShouldHaveAtLeastOneNumericCharacter();
-        void PasswordShouldHaveAtLeastOneSymbolCharacter();
-        void PasswordShouldHaveAtLeastOneUpperCharacter();
-    };
-}
+class PasswordUpperCharacterRule : public PasswordRule {
+public:
+    bool IsRuleSatisfied(string password) override;
+};
 
-#endif //WINGO_TESTPASSWORDRULES_H
+#endif //WINGO_PASSWORDUPPERCHARACTERRULE_H

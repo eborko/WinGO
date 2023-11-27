@@ -11,6 +11,7 @@
 #include "password-rules/PasswordSymbolRule.h"
 #include "password-rules/PasswordLengthRule.h"
 #include "password-rules/PasswordNumericRule.h"
+#include "password-rules/PasswordUpperCharacterRule.h"
 #include "vector"
 
 class PasswordRule;
@@ -34,15 +35,21 @@ string Account::GetPassword() const {
 }
 
 bool Account::IsValidPassword(string password) {
+    // Declare rules
     PasswordLengthRule passwordLengthRule;
     PasswordNumericRule passwordNumericRule;
     PasswordSymbolRule passwordSymbolRule;
+    PasswordUpperCharacterRule passwordUpperCharacterRule;
 
+
+    // Add rules
     vector<PasswordRule*> rules;
     rules.push_back(&passwordLengthRule);
     rules.push_back(&passwordNumericRule);
     rules.push_back(&passwordSymbolRule);
+    rules.push_back(&passwordUpperCharacterRule);
 
+    // Apply rules
     for (const auto& rule : rules) {
         if (!rule->IsRuleSatisfied(password)) return false;
     }

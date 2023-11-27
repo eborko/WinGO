@@ -6,6 +6,7 @@
 #include "../../../src/authentication//password-rules/PasswordLengthRule.h"
 #include "../../../src/authentication//password-rules/PasswordNumericRule.h"
 #include "../../../src/authentication//password-rules/PasswordSymbolRule.h"
+#include "../../../src/authentication//password-rules/PasswordUpperCharacterRule.h"
 #include "QTest"
 
 void unit_tests::TestPasswordRules::PasswordShouldHaveLengthBetweenEightAndTwelveCharacters() {
@@ -45,4 +46,14 @@ void unit_tests::TestPasswordRules::PasswordShouldHaveAtLeastOneSymbolCharacter(
 
     // Try without Symbol character
     QVERIFY(!passwordSymbolRule.IsRuleSatisfied("fsfsdfs"));
+}
+
+void unit_tests::TestPasswordRules::PasswordShouldHaveAtLeastOneUpperCharacter() {
+    PasswordUpperCharacterRule passwordUpperCharacterRule;
+
+    // Try with upper case character
+    QVERIFY(passwordUpperCharacterRule.IsRuleSatisfied("dasdaDss"));
+
+    // Try without upper case character
+    QVERIFY(!passwordUpperCharacterRule.IsRuleSatisfied("dasfsdf"));
 }
