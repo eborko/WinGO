@@ -3,10 +3,10 @@
 //
 
 #include "TestPasswordRules.h"
-#include "../../../src/authentication//password-rules/PasswordLengthRule.h"
-#include "../../../src/authentication//password-rules/PasswordNumericRule.h"
-#include "../../../src/authentication//password-rules/PasswordSymbolRule.h"
-#include "../../../src/authentication//password-rules/PasswordUpperCharacterRule.h"
+#include "PasswordLengthRule.h"
+#include "PasswordNumericRule.h"
+#include "PasswordSymbolRule.h"
+#include "PasswordUpperCharacterRule.h"
 #include "QTest"
 
 void unit_tests::TestPasswordRules::PasswordShouldHaveLengthBetweenEightAndTwelveCharacters() {

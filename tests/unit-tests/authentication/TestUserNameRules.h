@@ -6,6 +6,7 @@
 #define WINGO_TESTUSERNAMERULES_H
 
 #include "QObject"
+
 namespace unit_tests {
     class TestUserNameRules : public QObject {
     Q_OBJECT

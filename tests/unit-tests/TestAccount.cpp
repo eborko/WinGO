@@ -3,7 +3,7 @@
 //
 
 #include "TestAccount.h"
-#include "../../src/authentication/Account.h"
+#include "Account.h"
 #include <QTest>
 
 namespace unit_tests {

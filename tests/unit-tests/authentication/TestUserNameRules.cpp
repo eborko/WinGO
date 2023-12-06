@@ -8,8 +8,8 @@
 //You should have received a copy of the GNU General Public License along with WinGO. If not, see <https://www.gnu.org/licenses/>.
 
 #include "TestUserNameRules.h"
-#include "../../../src/authentication/username-rules/UserNameBlankSpaceRule.h"
-#include "../../../src/authentication/username-rules/UserNameLengthRule.h"
+#include "UserNameBlankSpaceRule.h"
+#include "UserNameLengthRule.h"
 #include "QTest"
 
 void unit_tests::TestUserNameRules::UserNameShouldNotContainBlankSpace() {
