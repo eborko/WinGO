@@ -15,6 +15,10 @@ find_package(Qt6 REQUIRED COMPONENTS Core Widgets Test)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
+include_directories(src/authentication)
+include_directories(src/authentication/password-rules)
+include_directories(src/authentication/username-rules)
+
 add_library(WinGO_Lib SHARED
         src/authentication/User.cpp
         src/authentication/User.h

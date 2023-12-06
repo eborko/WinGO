@@ -8,8 +8,8 @@
 //You should have received a copy of the GNU General Public License along with WinGO. If not, see <https://www.gnu.org/licenses/>.
 
 #include "TestUser.h"
-#include "../../src/authentication/User.h"
-#include "../../src/authentication/Account.h"
+#include "User.h"
+#include "Account.h"
 #include <QTest>
 
 namespace unit_tests {

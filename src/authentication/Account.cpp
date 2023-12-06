@@ -71,6 +71,7 @@ bool Account::IsValidUserName(string userName) {
     rules.push_back(&userNameLengthRule);
     rules.push_back(&userNameBlankSpaceRule);
 
+    // Apply rules
     for (const auto& rule : rules) {
         if (!rule->IsRuleSatisfied(userName)) return false;
     }
